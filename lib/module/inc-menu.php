@@ -315,3 +315,10 @@
 		</div>
 	</div>
 </div>
+<style>
+	@media (max-width:800px){
+	.menu-btn-settings12345{
+		display:none;
+	}
+}
+</style>
