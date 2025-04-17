@@ -7,7 +7,7 @@
 <meta name="description" content="RPCS3 is a multi-platform open-source Sony PlayStation 3 emulator and debugger written in C++ for Windows, Linux, macOS and FreeBSD. The purpose of this project is to accurately emulate the PlayStation 3 in its entirety with the power of reverse engineering and community collaboration.">
 <meta name="keywords" content="rpcs3, playstation, playstation 3, ps3, emulator, debugger, windows, linux, macos, freebsd, open source, nekotekina, kd11, home">
 <meta name="google-site-verification" content="cO1o6sx54cvKxhbnYsABWtl4sYFj9uVKV0DxLKZkWv8"/>
-<?php include 'lib/module/sys-meta.php';?>
+<!-- <?php include 'lib/module/sys-meta.php';?> -->
 <meta property="og:title" content="RPCS3 - The PlayStation 3 Emulator" />
 <meta property="og:description" content="RPCS3 is a multi-platform open-source Sony PlayStation 3 emulator and debugger written in C++ for Windows, Linux, macOS and FreeBSD made possible with the power of reverse engineering." />
 <meta property="og:image" content="https://rpcs3.net/img/meta/mobile/1200.png" />
@@ -587,8 +587,9 @@
 			</div>
 		</div>
 	</div>
+	<!------------Здесь блок про патреон который поменяли на карты с бочками------------->
 	<div class="landing-con-patreon darkmode-patreon">
-		<div class="patreon-img-backdrop">
+		<!--<div class="patreon-img-backdrop">
 		</div>
 		<div class="patreon-img-overlay">
 		</div>
@@ -611,7 +612,7 @@
 						</style>
 						<div class="patreon-wrp-mantra scale-content-txt-1 ">
 							<div class="patreon-tx1-mantra">
-								<h2>Поддержка проекта</h2>
+								<h2>Наши бочки на карте</h2>
 								<div class="landing-con-divider" style="background: #ff424d">
 								</div>
 							</div>
@@ -633,7 +634,25 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div>-->
+		<h1>Наши бочки на карте</h1>
+		<div id="container"></div>
+		<style>
+			#container{
+				height: 100vh;
+			}
+		</style>
+		<script src="https://mapgl.2gis.com/api/js/v1"></script>
+		<script>
+			const map = new mapgl.Map('container', {
+				center: [74.58402137760633, 42.84654296969603],
+				zoom: 13,
+				key: '2a05a139-556e-4871-b4ec-ce47db39dfb6',
+			});
+			const marker = new mapgl.Marker(map, {
+				coordinates: [74.58518036852237, 42.846530064713754],
+			});
+		</script>
 	</div>
 	<?php include 'lib/module/inc-footer.php';?>
 </div>
